@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campuslands</title>
+    <link rel="stylesheet" href="prism.css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+	<script src="prism.js"></script>
+</head>
+<body>
+    <h1>Resumen github y git</h1>
+    <p>Comandos y procesos muy utiles que ahorran tiempo a la hora de aprender comandos para git (repositorio local, es decir que esta en tu pc) y github (repositorio remoto, es decir en la nube)</p>
+<p>Correrlo en PHP para observar el resultado de cada ejemplo.</p>
+<pre><code class="language-php">
+Antes de empezar con eso de GITHUB y lo demas
+vamos a suponer unos datos ficticios:
+
+- nommbre de usuario de GITHUB: nombreUsuario
+- correo vinculado con GITHUB: correoUsuario.1@gmail.com 
+//recuerda esto para tu caso serian tus datos personales de github
+***RECUERDA LOS COMANDOS DE LINUX SON LOS MISMOS PARA WINDOWS***
+
+
+
+Para cuando en la terminal de Linux te pidan la contraseña de GITHUB hacer lo siguiente:
+//ir a google e ingresar a su cuenta GITHUB
+ir al link: https://github.com/settings/tokens/new
+escribir en Note algun texto e ir abajo y seleccionar "repo" y las demas opciones
+ahora ir hasta abajo y darle en Generate token, luego de generado el token esa contraseña (token)
+guardarlo por ahi por que sera su contraseña para esto de los repos (recuerda este token tiene una fecha de expiracion)
+***desde ahora en adelante esa sera su contraseña de github cuando te pidan password al ir a la terminal***
+
+
+
+Pasos para configurar cuenta github en linux:
+git config --global user.name "nombreUsuario"
+git config --global user.email "correoUsuario.1@gmail.com"
+
+
+
+Para traer un repositorio PUBLICO de GITHUB y subir los cambios que se hagan al repositorio:
+Abre la terminal de Linux y ejecuta los siguientes comandos:
+git clone https://github.com/andressantage/nombreRepositorio  //se trae el repositorio de github
+cd nombreRepositorio //entra a la carpeta descargada del repositorio
+code . //abre el repositorio
+//ahora puedes hacer los cambios en Visual Studio Code una vez hecho los cambios puedes procedes a continuacion a subir esos cambios
+//abre la carpeta del repositorio con la terminal
+git status //con este puedes saber que cambios aun faltan por subirse al repositorio local (aparece en rojo los que aun no estan en el repo local y en verde los que ya se pusieron)
+git add . //con esto añades todos los cambios que realizastes al repositorio local
+git commit -m "Mensaje del commit" //como quieres subir una version de los cambios que realizaste ingresa este comando y esribe el mensaje que quieras en este caso se puso: Mensaje del commit
+//ahora necesitas saber en que rama te encuentras para ello abre de nuevo la carpeta del repositorio en la terminal 
+//ahora seguir los pasos:
+git branch //con esto sabras en que rama te encuentras y en la que estas haciendo los cambios
+git push origin nombreRama //ahora reemplaza el nombre de la rama y usas push para subir el repo al github
+</code></pre>
+
+<p>_________________________________________________</p>
+</body>
+</html>
